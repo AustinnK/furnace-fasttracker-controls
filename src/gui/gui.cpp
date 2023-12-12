@@ -1350,10 +1350,10 @@ void FurnaceGUI::keyDown(SDL_Event& ev) {
   if (bindSetActive) {
     if (!ev.key.repeat) {
       switch (ev.key.keysym.sym) {
-        case SDLK_LCTRL: case SDLK_RCTRL:
-        case SDLK_LALT: case SDLK_RALT:
-        case SDLK_LGUI: case SDLK_RGUI:
-        case SDLK_LSHIFT: case SDLK_RSHIFT:
+        case SDLK_LCTRL:
+        case SDLK_LALT:
+        case SDLK_LGUI:
+        case SDLK_LSHIFT:
           bindSetPending=false;
           actionKeys[bindSetTarget]=(mapped&(~FURK_MASK))|0xffffff;
           break;
